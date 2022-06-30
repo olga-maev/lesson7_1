@@ -21,14 +21,14 @@ public class StatServicesTests {
         if (abs(expected - actual) < 0.00001) {
             expect = (int) expected;
             act = (int) expected;
-        }
-        else {
-            expect=1;
-            act=-1;
+        } else {
+            expect = 1;
+            act = -1;
         }
 
-        Assertions.assertEquals(expect,act);
+        Assertions.assertEquals(expect, act);
     }
+
     @Test
     public void souldStatisticsMean() {
         StatServices service = new StatServices();
@@ -47,40 +47,44 @@ public class StatServicesTests {
 
         Assertions.assertEquals(expect, act);
     }
+
     @Test
-    public void souldStatisticHighSale(){
+    public void souldStatisticHighSale() {
         StatServices service = new StatServices();
         double[] sale = {15, 45, 25.7, 64, 17.2, 48, 15.9, 25.5, 65, 32.4, 8.4, 63};
         int expected = 9;
         int actual = service.highSale(sale);
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void souldStatisticsLowSale(){
+    public void souldStatisticsLowSale() {
         StatServices service = new StatServices();
         double[] sale = {15, 45, 25.7, 64, 17.2, 48, 15.9, 25.5, 65, 32.4, 8.4, 63};
         int expected = 11;
         int actual = service.lowSale(sale);
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void souldStatisticsCountLowMean(){
-        StatServices services=new StatServices();
+    public void souldStatisticsCountLowMean() {
+        StatServices services = new StatServices();
         double[] sale = {15, 45, 25.7, 64, 17.2, 48, 15.9, 25.5, 65, 32.4, 8.4, 63};
         int expected = 7;
         int actual = services.countLowMean(sale);
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void souldStatisticsCountHighMean(){
-        StatServices services=new StatServices();
+    public void souldStatisticsCountHighMean() {
+        StatServices services = new StatServices();
         double[] sale = {15, 45, 25.7, 64, 17.2, 48, 15.9, 25.5, 65, 32.4, 8.4, 63};
         int expected = 5;
         int actual = services.countHighMean(sale);
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 }

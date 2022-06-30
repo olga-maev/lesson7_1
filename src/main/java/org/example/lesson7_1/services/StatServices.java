@@ -43,7 +43,7 @@ public class StatServices {
             if ((int) t < low) {
                 low = (int) t;
                 month = i;
-                }
+            }
             i++;
         }
         return month;
